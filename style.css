@@ -1,25 +1,26 @@
-/* Base Styles */
+/* Fully transparent body (shows desktop wallpaper) */
 body {
     margin: 0;
     padding: 0;
-    background-color: transparent !important; /* Fully transparent */
+    background-color: transparent !important;
     font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     overflow: hidden;
     height: 100vh;
     user-select: none;
 }
 
-/* Widget Styling */
+/* Widget styling (semi-transparent glass effect) */
 .widget {
     position: absolute;
-    background: rgba(15, 15, 15, 0.2); /* Slight tint for visibility */
-    backdrop-filter: blur(8px);
+    background: rgba(20, 20, 20, 0.2); /* Adjust opacity here */
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10; /* Ensures widgets stay on top */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .widget:hover {
@@ -101,4 +102,27 @@ body {
 
 .stat-value {
     font-weight: 600;
+}
+
+/* Quick Access Widget */
+.quick-access-widget {
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-access-widget button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quick-access-widget button:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
