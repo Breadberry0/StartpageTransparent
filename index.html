@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Glass Start Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Clock Widget (Draggable) -->
+    <div class="widget clock-widget" id="draggable-clock">
+        <div class="time" id="time">00:00:00</div>
+        <div class="date" id="date">Mon, Jan 1 2024</div>
+    </div>
+
+    <!-- Spotify Widget (Draggable) -->
+    <div class="widget spotify-widget" id="draggable-spotify">
+        <div class="spotify-controls">
+            <button id="prev-track">⏮</button>
+            <button id="play-pause">⏯</button>
+            <button id="next-track">⏭</button>
+        </div>
+        <div class="track-info">
+            <span id="song-title">Not Playing</span>
+            <span id="song-artist">—</span>
+        </div>
+    </div>
+
+    <!-- System Stats Widget (Draggable) -->
+    <div class="widget system-widget" id="draggable-system">
+        <div class="stat">
+            <span class="stat-label">CPU:</span>
+            <span class="stat-value" id="cpu-load">0%</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">RAM:</span>
+            <span class="stat-value" id="ram-usage">0%</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
