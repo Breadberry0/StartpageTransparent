@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Glass Start Page</title>
+    <title>Transparent Desktop Widgets</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Clock Widget (Draggable) -->
+    <!-- Clock Widget -->
     <div class="widget clock-widget" id="draggable-clock">
         <div class="time" id="time">00:00:00</div>
         <div class="date" id="date">Mon, Jan 1 2024</div>
     </div>
 
-    <!-- Spotify Widget (Draggable) -->
+    <!-- Spotify Widget -->
     <div class="widget spotify-widget" id="draggable-spotify">
         <div class="spotify-controls">
             <button id="prev-track">⏮</button>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <!-- System Stats Widget (Draggable) -->
+    <!-- System Stats Widget -->
     <div class="widget system-widget" id="draggable-system">
         <div class="stat">
             <span class="stat-label">CPU:</span>
@@ -37,6 +37,12 @@
             <span class="stat-label">RAM:</span>
             <span class="stat-value" id="ram-usage">0%</span>
         </div>
+    </div>
+
+    <!-- Quick Access Widget (GitHub, ProtonMail) -->
+    <div class="widget quick-access-widget" id="draggable-quick-access">
+        <button onclick="window.open('https://github.com', '_blank')">GitHub</button>
+        <button onclick="window.open('https://mail.proton.me', '_blank')">ProtonMail</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
